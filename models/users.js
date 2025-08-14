@@ -17,4 +17,4 @@ utilisateurSchema.pre('save',async function (next) {
     
 });
 
-module.exports=mongoose.model('Utilisateur',utilisateurSchema);
+module.exports=mongoose.model('User',utilisateurSchema);

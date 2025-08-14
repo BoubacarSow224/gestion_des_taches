@@ -5,8 +5,8 @@ const tacheSchema = new mongoose.Schema({
   description:{String}, // Description de la tâche
   priorite: { type: String, enum: ['basse', 'moyenne', 'haute'], default: 'moyenne' }, // Priorité
   statut: { type: String, enum: ['ouverte', 'enCours', 'terminee'], default: 'ouverte' }, // Statut
-  assigneeA: { type: mongoose.Schema.Types.ObjectId, ref: 'Utilisateur' }, // Personne assignée
-  creePar: { type: mongoose.Schema.Types.ObjectId, ref: 'Utilisateur' }, // Créateur de la tâche
+  assigneeA: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // Personne assignée
+  creePar: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // Créateur de la tâche
   dateEcheance: {Date} // Date limite
 }, { timestamps: true }); // Ajoute automatiquement createdAt et updatedAt
 
